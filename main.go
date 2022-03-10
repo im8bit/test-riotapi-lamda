@@ -24,6 +24,7 @@ func HandleRequest(ctx context.Context, name MyEvent) ([]aws.LeaderboardDynamoDB
 	var activeActId string = riot.GetActiveActId()
 
 	result := aws.FindAll(svc, activeActId)
+
 	return result, nil
 }
 
